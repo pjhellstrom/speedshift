@@ -6,6 +6,7 @@ const userSchema = new Schema({
   last_name: { type: String, required: true },
   location: { type: String, required: true },
   email: { type: String, required: true },
+  isManager: { type: Boolean, required: true },
   team_id: { type: String, required: true }
 });
 
