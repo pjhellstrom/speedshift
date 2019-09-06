@@ -35,10 +35,10 @@ router
 
 // Matches with "/manager/:id" delete user
 .route("/manager/deleteuser/:id")
-.delete(userController.findById)
+.delete(userController.remove)
 
 // Matches with "/manager/:id" delete shift
 .route("/manager/deleteshift/:id")
-.delete(shiftController.findById)
+.delete(shiftController.remove)
 
 module.exports = router;
