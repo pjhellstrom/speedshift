@@ -1,15 +1,17 @@
-const db = require("../models");
+const db = require("../models/user");
 
 // Defining methods for the userController
 module.exports = {
   findAll: function(req, res) {
     db.User.find(req.query)
       .sort({ last_name: -1 })
+      .populate("team")
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   findById: function(req, res) {
     db.User.findById(req.params.id)
+      .populate("team")
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
