@@ -1,4 +1,4 @@
-const db = require("../models");
+const db = require("../models/shift");
 
 // Defining methods for the shiftController
 module.exports = {
