@@ -1,11 +1,9 @@
 import React from "react";
 
-function About() {
+function Home() {
   return (
     <div>
-      <h1>PupStar: They're the Good Boys and Girls</h1>
-
-	  Imagine a nice dog pic as the background
+      <h1>Home Page</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque velit, lobortis ut magna
         varius, blandit rhoncus sem. Morbi lacinia nisi ac dui fermentum, sed luctus urna tincidunt.
@@ -20,4 +18,4 @@ function About() {
   );
 }
 
-export default About;
+export default Home;
