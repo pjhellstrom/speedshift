@@ -18,7 +18,7 @@ router.route("/manager/addshift").post(shiftController.create);
 router.route("/manager/addemployee").post(userController.create);
 
 // Matches with "/manager/:id" update the capacity of on shift
-router.route("/manager/shift/:id").put(shiftController.findById);
+router.route("/manager/shift/:id").put(shiftController.update);
 
 // Matches with "/manager/:id" delete user
 router.route("/manager/deleteuser/:id").delete(userController.findById);
