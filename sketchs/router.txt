@@ -1,0 +1,12 @@
+user : {
+    1. findall => department_id,
+    2. delete,
+    3. create
+    4. findbyId => user_id
+}
+shift : {
+    1. findall => department_id,
+    2. create,
+    3. delete,
+    4. modify(update the capacity)
+}
