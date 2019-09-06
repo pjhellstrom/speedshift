@@ -5,6 +5,9 @@ import LandingPage from "./components/pages/LandingPage";
 import About from "./components/pages/About";
 import Blog from "./components/pages/Blog";
 import Contact from "./components/pages/Contact";
+import Date from "./components/Date";
+import Day from "./components/Day";
+
 
 function App() {
 	return (
