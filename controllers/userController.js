@@ -1,32 +1,32 @@
-const db = require("../models/user");
+const User = require("../models/user");
 
 // Defining methods for the userController
 module.exports = {
   findAll: function(req, res) {
-    db.User.find(req.query)
+    User.find(req.query)
       .sort({ last_name: -1 })
       .populate("team")
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   findById: function(req, res) {
-    db.User.findById(req.params.id)
+    User.findById(req.params.id)
       .populate("team")
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   create: function(req, res) {
-    db.User.create(req.body)
+    User.create(req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   update: function(req, res) {
-    db.User.findOneAndUpdate({ _id: req.params.id }, req.body)
+    User.findOneAndUpdate({ _id: req.params.id }, req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   remove: function(req, res) {
-    db.User.findById({ _id: req.params.id })
+    User.findById({ _id: req.params.id })
       .then(dbModel => dbModel.remove())
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
