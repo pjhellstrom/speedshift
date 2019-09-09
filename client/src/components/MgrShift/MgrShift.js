@@ -3,6 +3,9 @@ import MgrNav from "./MgrNav"
 
 
 class MgrShift extends Component {
+
+
+	
 	render() {
 		return (
 			<div>
