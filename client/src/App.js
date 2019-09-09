@@ -10,7 +10,7 @@ import LandingPage from "./components/pages/LandingPage";
 // import Day from "./components/Day";
 // import Employee from "./components/EmpShift/EmpShift";
 
-import EmpShift from "./components/EmpShift/EmpShift";
+// import EmpShift from "./components/EmpShift/EmpShift";
 import MgrShift from "./components/MgrShift/MgrShift";
 // import Blog from "./components/pages/Blog";
 // import Contact from "./components/pages/Contact";
