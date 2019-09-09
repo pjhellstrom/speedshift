@@ -25,7 +25,10 @@ function App() {
 				{/* <NavTabs /> */}
 				<Route exact path="/" component={LandingPage} />
 				<Route exact path="/managerview" component={MgrShift}/>
-				<Route exact path="/managerview/other" component={MgrShift}/>
+				<Route exact path="/managerview/team" component={MgrShift}/>
+				<Route exact path="/managerview/addshift" component={MgrShift}/>
+				<Route exact path="/managerview/manageshift" component={MgrShift}/>
+
 				{/* <Route exact path="/employeeview" component={EmpShift} /> */}
 				{/* <Route path="/contact" component={Contact} /> */}
 			</div>
