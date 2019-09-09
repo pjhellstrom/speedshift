@@ -1,23 +1,33 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import NavTabs from "./components/NavTabs";
-import Home from "./components/pages/Home";
+import LandingPage from "./components/pages/LandingPage";
+
 import About from "./components/pages/About";
 import Blog from "./components/pages/Blog";
 import Contact from "./components/pages/Contact";
-// import Date from "./components/Date";
+import Date from "./components/Date/Date";
 // import Day from "./components/Day";
+// import Employee from "./components/EmpShift/EmpShift";
+
+import EmpShift from "./components/EmpShift/EmpShift";
+import MgrShift from "./components/MgrShift/MgrShift";
+// import Blog from "./components/pages/Blog";
+// import Contact from "./components/pages/Contact";
+
+
 
 
 function App() {
 	return (
 		<Router>
 			<div>
-				<NavTabs />
-				<Route exact path="/" component={Home} />
-				<Route exact path="/about" component={About} />
-				<Route exact path="/blog" component={Blog} />
-				<Route path="/contact" component={Contact} />
+				{/* <NavTabs /> */}
+				<Route exact path="/" component={LandingPage} />
+				<Route exact path="/managerview" component={MgrShift}/>
+				<Route exact path="/managerview/other" component={MgrShift}/>
+				{/* <Route exact path="/employeeview" component={EmpShift} /> */}
+				{/* <Route path="/contact" component={Contact} /> */}
 			</div>
 		</Router>
 	);

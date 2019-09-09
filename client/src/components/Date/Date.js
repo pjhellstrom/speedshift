@@ -8,4 +8,16 @@ import "./style.css";
 //     }
 // }
 
+
+
+
+
+ class Date extends React.Component {
+    render() {
+        return (
+            <div><Moment format="YYYY/MM/DD">{this.props.dateToFormat}</Moment></div>
+
+        )
+    }
+}
 export default Date;
