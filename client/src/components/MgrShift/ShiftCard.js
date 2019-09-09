@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card'
 const ShiftCard = (props) => {
 	return (
 		<div className="card">
-			
+
 			<Card>
 				{/* {console.log(props)} */}
 				<Card.Header>{props.name}</Card.Header>
@@ -17,8 +17,6 @@ const ShiftCard = (props) => {
 					</Card.Text>
 				</Card.Body>
 			</Card>
-
-
 
 		</div>
 	);

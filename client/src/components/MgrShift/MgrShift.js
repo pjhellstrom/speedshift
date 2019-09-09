@@ -7,7 +7,7 @@ import shifts from "../../fakedata/shift.json";
 class MgrShift extends Component {
 
 
-	
+
 	render() {
 		return (
 			<div>
@@ -18,18 +18,18 @@ class MgrShift extends Component {
 					{/* mapping through dummy data change to real data in production */}
 					{shifts.map(
 						(shifts, i) => (
-						
-						
+
+
 						<ShiftCard
 							{...shifts} // Breaks out mem data for rendering each card
 							key={i} // Gives each card a react key i
 							/>
-							
+
 						)
 					)}
 
 					{/* <ShiftCard/> */}
-					
+
 				</div>
 			</div>
 		);
@@ -40,7 +40,7 @@ export default MgrShift;
 
 
 // {cards.map(
-// 	(cards, i) => (<MemCard 
+// 	(cards, i) => (<MemCard
 // 		{...mem[cards]} // Breaks out mem data for rendering each card
 // 		key={i} // Gives each card a react key i
 // 		cardClick={this.cardClick} // This is where the click function gets passed in

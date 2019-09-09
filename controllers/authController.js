@@ -18,27 +18,25 @@ authController.register = function(req, res) {
 
 // Post registration
 authController.doRegister = function(req, res) {
-  User.register(
-    new User({
-      username: req.body.username,
-      name: req.body.firstname,
-      last_name: req.body.lastname,
-      location: req.body.location,
-      isManager: req.body.isManager,
-      team_id: req.body.teamid
-    }),
-    req.body.password,
-    function(err, username) {
-      if (err) {
-        console.error(err);
-        return res.json({ username: username });
-      }
-      console.log("authController doRegister callback hit");
-      passport.authenticate("local")(req, res, function() {
-        res.redirect("/");
-      });
+  const newUser = new User({
+    username: req.body.username,
+    firstname: req.body.firstname,
+    lastname: req.body.lastname,
+    location: req.body.location,
+    isManager: req.body.isManager,
+    teamid: req.body.teamid
+  });
+  User.register(newUser, req.body.password, function(err, username) {
+    console.log(newUser);
+    if (err) {
+      console.error(err);
+      return res.json({ username: username });
     }
-  );
+    console.log("authController doRegister callback hit");
+    passport.authenticate("local")(req, res, function() {
+      res.redirect("/");
+    });
+  });
 };
 
 // Go to login page
@@ -49,6 +47,7 @@ authController.login = function(req, res) {
 // Post login
 authController.doLogin = function(req, res) {
   passport.authenticate("local")(req, res, function() {
+    console.log("Login action successful!");
     res.redirect("/");
   });
 };
@@ -56,6 +55,7 @@ authController.doLogin = function(req, res) {
 // logout
 authController.logout = function(req, res) {
   req.logout();
+  console.log("Logout action successful!");
   res.redirect("/");
 };
 

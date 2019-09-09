@@ -3,17 +3,17 @@ const passportLocalMongoose = require("passport-local-mongoose");
 // const bcrypt = require("bcryptjs");
 const Schema = mongoose.Schema;
 
-const userSchema = new Schema({
+const User = new Schema({
   username: { type: String, trim: true, required: true },
-  name: { type: String, trim: true, required: true },
-  password: { type: String, trim: true, required: true },
-  last_name: { type: String, trim: true, required: true },
+  firstName: { type: String, trim: true, required: true },
+ // password: { type: String, trim: true, required: true },
+  lastName: { type: String, trim: true, required: true },
   location: { type: String, trim: true, required: true },
   isManager: { type: Boolean, required: true },
-  team_id: { type: String, required: true }
+  teamId: { type: String, required: true }
 });
 
-userSchema.plugin(passportLocalMongoose);
+User.plugin(passportLocalMongoose);
 // // WILL THIS WORK WITH MONGOOSE? =====================
 // // Creating a custom method for our User model.
 // //This will check if an unhashed password entered by the
@@ -31,6 +31,5 @@ userSchema.plugin(passportLocalMongoose);
 
 // //====================================================
 
-const User = mongoose.model("User", userSchema);
 
-module.exports = User;
+module.exports = mongoose.model("User", User);

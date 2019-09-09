@@ -9,7 +9,7 @@ const shiftSchema = new Schema({
   date: { type: Date, required: true },
   start: { type: Number, required: true },
   end: { type: Number, required: true },
-  team_id: { type: String, required: true }
+  teamId: { type: String, required: true }
 });
 
 const Shift = mongoose.model("Shift", shiftSchema);
