@@ -10,3 +10,47 @@ shift : {
     3. delete,
     4. modify(update the capacity)
 }
+
+
+font register 
+
+data={
+    firstname : ,
+    lastname : ,
+    location : ,
+    username : ,
+    isManager :   ,
+    team_id : ,
+    password : ,
+}
+
+
+https://www.geeksforgeeks.org/nodejs-authentication-using-passportjs-and-passport-local-mongoose/
+
+
+login page :
+
+data ={
+    username : ,
+    password : 
+}
+
+managershift page : 
+get methord : /api/shift/manager
+    data = {
+        teamid : ,
+        userid : ,
+        isManager : ,
+    }
+
+post methord : /api/shift/manager/addshift
+    data = {
+        name: ,
+        description: ,
+        capacity: ,
+        location: ,
+        date: ,
+        start: ,
+        end: ,
+        team_id: 
+    }
