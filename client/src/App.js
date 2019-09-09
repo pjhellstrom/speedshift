@@ -3,10 +3,10 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import NavTabs from "./components/NavTabs";
 import LandingPage from "./components/pages/LandingPage";
 
-import About from "./components/pages/About";
-import Blog from "./components/pages/Blog";
-import Contact from "./components/pages/Contact";
-import Date from "./components/Date/Date";
+// import About from "./components/pages/About";
+// import Blog from "./components/pages/Blog";
+// import Contact from "./components/pages/Contact";
+// import Date from "./components/Date/Date";
 // import Day from "./components/Day";
 // import Employee from "./components/EmpShift/EmpShift";
 

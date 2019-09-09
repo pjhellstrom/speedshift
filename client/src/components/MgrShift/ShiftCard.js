@@ -6,7 +6,7 @@ const ShiftCard = (props) => {
 		<div className="card">
 			
 			<Card>
-				{console.log(props)}
+				{/* {console.log(props)} */}
 				<Card.Header>{props.name}</Card.Header>
 				<Card.Body>
 					{/* <Card.Title>Special title treatment</Card.Title> */}
