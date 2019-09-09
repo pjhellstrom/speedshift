@@ -18,24 +18,24 @@ authController.register = function(req, res) {
 
 // Post registration
 authController.doRegister = function(req, res) {
-  User.register(
-    new User({
-      username: req.body.username,
-      name: req.body.firstname,
-      last_name: req.body.lastname,
-      location: req.body.location,
-      isManager: req.body.isManager,
-      team_id: req.body.teamid
-    }),
-    req.body.password,
-    function(err, username) {
+  var Users = new User({
+    username: req.body.username,
+    name: req.body.firstname,
+    last_name: req.body.lastname,
+    location: req.body.location,
+    isManager: req.body.isManager,
+    team_id: req.body.teamid
+  });
+  User.register(Users,req.body.password,
+    function(err, user) {
       if (err) {
-        console.error(err);
-        return res.json({ username: username });
-      }
+        res.json({success:false, message:"Your account could not be saved. Error: ", err}); 
+      }else{ 
+        res.json({success: true, message: "Your account has been saved"}) 
+      };
       console.log("authController doRegister callback hit");
       passport.authenticate("local")(req, res, function() {
-        res.redirect("/");
+        res.json(res,req);
       });
     }
   );
