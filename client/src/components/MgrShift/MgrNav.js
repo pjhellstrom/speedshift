@@ -5,19 +5,35 @@ function MgrNav() {
 	return (
 		<ul className="nav nav-tabs">
 			<li className="nav-item">
-				<Link to="/" className={window.location.pathname === "/managerview" ? "nav-link active" : "nav-link"}>
-				Home
+				<Link to="/managerview" className={window.location.pathname === "/managerview" ? "nav-link active" : "nav-link"}>
+					<i className="fas fa-home fa-2x"></i>
 				</Link>
 			</li>
 			<li className="nav-item">
 				<Link
-				to="/managerview"
-				className={window.location.pathname === "/managerview/other" ? "nav-link active" : "nav-link"}
+					to="/managerview"
+					className={window.location.pathname === "/managerview/team" ? "nav-link active" : "nav-link"}
 				>
-				Other
+					<i className="fas fa-users-cog fa-2x"></i>
 				</Link>
 			</li>
-			
+			<li className="nav-item">
+				<Link
+					to="/managerview"
+					className={window.location.pathname === "/managerview/addshift" ? "nav-link active" : "nav-link"}
+				>
+					<i className="fas fa-calendar-plus fa-2x"></i>
+				</Link>
+			</li>
+			<li className="nav-item">
+				<Link
+					to="/managerview"
+					className={window.location.pathname === "/managerview/manageshift" ? "nav-link active" : "nav-link"}
+				>
+					<i className="fas fa-calendar-check fa-2x"></i>
+				</Link>
+			</li>
+
 		</ul>
 	);
 }
